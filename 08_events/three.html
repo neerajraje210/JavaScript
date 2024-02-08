@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+</head>
+<body>
+    <h1>Java Script on Youtube</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+   const sayDate = function(str){
+    console.log(str, Date.now());
+   }
+
+   const intervalId = setInterval(sayDate, 2000,"hi")
+
+   
+   document.querySelector('#start').addEventListener('click', function(){
+       
+       console.log("Start")
+    })
+    
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId)
+        console.log("Stop")
+        
+    })
+    
+</script>
+</html>
