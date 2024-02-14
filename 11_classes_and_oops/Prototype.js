@@ -28,3 +28,43 @@ Array.prototype.heyHitesh =function(){
 myheros.hitesh()
 myheros.heyHitesh()
 // heroPower.heyHitesh()
+
+
+const user= {
+    name:'chai',
+    email:"chai@gmail.com"
+}
+
+const Teacher ={
+    makevideos:true
+}
+
+const TeachingSupport ={
+    isAvailable: false
+}
+
+const TAsupport={
+    makeAssignment: 'js Assignment',
+    fullTime: true,
+    __proto__:TeachingSupport
+
+}
+
+Teacher.__proto__= user
+
+//modern Syntax
+
+Object.setPrototypeOf(TeachingSupport,Teacher) 
+
+let anotheruserName ="chaiAurcode      "
+
+String.prototype.trueLength= function(){
+    console.log(`${this}`);
+   
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotheruserName.trueLength();
+
+"hitesh".trueLength()
+"icetea".trueLength()
